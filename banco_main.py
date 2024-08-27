@@ -1,17 +1,12 @@
-
-
 # Definindo as chaves em uma tupla
 chaves = ('Nome Completo', 'Data de Nascimento', 'CPF', 'Telefone', 'Profissão', 'E-mail', 'Endereço')
-
-# Cadastro do Clientr
+# Cadastro do Cliente
 usuario = {}
 print('Iniciando cadastro....\n')
 for chave in chaves:
     usuario[chave] = input(f'Informe o/a {chave}: ')
 usuario['Saldo'] = 0.0  # Define o saldo inicial como zero
-
 print('\nUsuário cadastrado com sucesso!')
-
 while True:
     print(f'\n{"-"*10} Banco Senai {"-"*10}')
     print('1 - Listar dados Cadastrados.')
@@ -20,7 +15,6 @@ while True:
     print('4 - Sacar.')
     print('5 - Sair do programa.')
     opcao = input('Opção Desejada: ')
-
     match opcao:
         case '1':
             print(f'\n{"="*10} DADOS DO USUÁRIO {"="*10}\n')
@@ -28,7 +22,6 @@ while True:
                 print(f'{chave}: {usuario.get(chave)}')
             print(f'Saldo: R$ {usuario["Saldo"]:.2f}')
             print(f'\n{"-"*10}\n')
-
         case '2':
             print("1 - Nome Completo")
             print("2 - Data de Nascimento")
@@ -44,7 +37,6 @@ while True:
                 print("Dado alterado com sucesso.")
             else:
                 print("Chave inválida!")
-
         case '3':
             try:
                 valor = float(input('Informe o valor do depósito: '))
@@ -52,7 +44,6 @@ while True:
                 print(f'Valor de R$ {valor:.2f} depositado com sucesso.')
             except:
                 print('Entrada inválida! Informe números corretamente.')
-
         case '4':
             try:
                 valor = float(input('Informe o valor do saque: '))
@@ -63,10 +54,8 @@ while True:
                     print('Saldo insuficiente!')
             except:
                 print('Entrada inválida! Informe números corretamente.')
-
         case '5':
             print('Saindo do programa.')
             break
-
         case _:
             print('Opção inválida! Tente novamente.')
