@@ -50,7 +50,7 @@ while True:
                 valor = float(input('Informe o valor do depósito: '))
                 usuario['Saldo'] += valor
                 print(f'Valor de R$ {valor:.2f} depositado com sucesso.')
-            except ValueError:
+            except:
                 print('Entrada inválida! Informe números corretamente.')
 
         case '4':
@@ -61,7 +61,7 @@ while True:
                     print(f'Valor de R$ {valor:.2f} sacado com sucesso.')
                 else:
                     print('Saldo insuficiente!')
-            except ValueError:
+            except:
                 print('Entrada inválida! Informe números corretamente.')
 
         case '5':
@@ -70,5 +70,3 @@ while True:
 
         case _:
             print('Opção inválida! Tente novamente.')
-
-    # Limpa a tela
